@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import {ERC721, IERC165} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {ERC721Enumerable} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {IERC6672} from "../interfaces/IERC6672.sol";
+import {IERC6672} from "../interface/IERC6672.sol";
 
 abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
     error ERC6672Unredeemable(
