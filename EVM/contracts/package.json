@@ -1,0 +1,44 @@
+{
+  "authors": [
+    "Archie <archie@redreamer.io> (https://github.com/archier7)",
+    "Domin Foundation<official@redreamer.io> (https://domin.foundation)"
+  ],
+  "bugs": {
+    "url": "https://github.com/domin-network/contracts/issues"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  },
+  "files": [
+    "interface/IOperator.sol",
+    "interface/IERC6672.sol",
+    "token/ERC6672.sol"
+  ],
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "RE:DREAMER",
+    "redeem",
+    "Domin",
+    "Domin Network",
+    "Domin Foundation"
+  ],
+  "homepage": "https://domin.network",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@domin-network/contracts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/domin-network/contracts.git"
+  },
+  "version": "1.0.4",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.56.0",
+    "ethers": "^6.9.1"
+  }
+}
