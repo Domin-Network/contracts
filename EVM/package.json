@@ -10,9 +10,9 @@
     "@openzeppelin/contracts": "^5.0.1"
   },
   "files": [
-    "interfaces/IOperator.sol",
-    "interfaces/IERC6672.sol",
-    "tokens/ERC6672.sol"
+    "contracts/interfaces/IOperator.sol",
+    "contracts/interfaces/IERC6672.sol",
+    "contracts/tokens/ERC6672.sol"
   ],
   "keywords": [
     "solidity",
@@ -29,7 +29,10 @@
   "license": "MIT",
   "main": "index.js",
   "name": "@domin-network/contracts",
-  "repository": "git@github.com:domin-network/contracts.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/domin-network/contracts.git"
+  },
   "version": "1.0.0",
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",

@@ -96,7 +96,7 @@ One of the key features of ERC-6672 is the flexibility offered by its open data 
 3. **Collectibles and Merchandise**: Offer NFTs that can be redeemed for physical collectibles, creating a bridge between digital assets and tangible goods.
 
 ## Conclusion
-ERC-6672's integration of the `memo`` field provides a powerful way to enhance the utility and interactivity of NFTs, making them not just collectible items but gateways to a range of experiences and benefits. The standard's flexibility allows creators and developers to craft unique and engaging scenarios for NFT holders.
+ERC-6672's integration of the `memo` field provides a powerful way to enhance the utility and interactivity of NFTs, making them not just collectible items but gateways to a range of experiences and benefits. The standard's flexibility allows creators and developers to craft unique and engaging scenarios for NFT holders.
 
 ## Support
 For support, please open an issue in the [GitHub repository](https://github.com/Domin-Network/contracts/issues)
