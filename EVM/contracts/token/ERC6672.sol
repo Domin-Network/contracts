@@ -33,14 +33,14 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         address operator,
         bytes32 redemptionId,
         uint256 tokenId
-    ) external view returns (bool) {
+    ) external view virtual returns (bool) {
         return _isRedeemed(operator, redemptionId, tokenId);
     }
 
     function getRedemptionIds(
         address operator,
         uint256 tokenId
-    ) external view returns (bytes32[] memory) {
+    ) external view virtual returns (bytes32[] memory) {
         if (redemptions[operator][tokenId].length() == 0) {
             revert ERC6672NoRedemptions(operator, tokenId);
         }
@@ -51,7 +51,7 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         bytes32 redemptionId,
         uint256 tokenId,
         string calldata memo
-    ) external {
+    ) external virtual {
         address operator = msg.sender;
         if (
             _isRedeemed(operator, redemptionId, tokenId) == true ||
@@ -67,7 +67,7 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         bytes32 redemptionId,
         uint256 tokenId,
         string calldata memo
-    ) external {
+    ) external virtual {
         address operator = msg.sender;
         if (
             _isRedeemed(operator, redemptionId, tokenId) == false ||
@@ -83,7 +83,7 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         address operator,
         bytes32 redemptionId,
         uint256 tokenId
-    ) internal view returns (bool) {
+    ) internal view virtual returns (bool) {
         return redemptionStatus[operator][tokenId][redemptionId];
     }
 
@@ -93,7 +93,7 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         uint256 tokenId,
         string calldata memo,
         bool isRedeemed_
-    ) internal {
+    ) internal virtual {
         redemptionStatus[operator][tokenId][redemptionId] = isRedeemed_;
         memos[operator][tokenId][redemptionId] = memo;
         if (isRedeemed_) {
@@ -128,7 +128,7 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         address operator,
         bytes32 redemptionId,
         uint256 tokenId
-    ) internal {
+    ) internal virtual {
         redemptions[operator][tokenId].remove(redemptionId);
     }
 
