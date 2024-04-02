@@ -33,14 +33,14 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         address operator,
         bytes32 redemptionId,
         uint256 tokenId
-    ) external view virtual returns (bool) {
+    ) public view virtual returns (bool) {
         return _isRedeemed(operator, redemptionId, tokenId);
     }
 
     function getRedemptionIds(
         address operator,
         uint256 tokenId
-    ) external view virtual returns (bytes32[] memory) {
+    ) public view virtual returns (bytes32[] memory) {
         if (redemptions[operator][tokenId].length() == 0) {
             revert ERC6672NoRedemptions(operator, tokenId);
         }
@@ -51,7 +51,7 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         bytes32 redemptionId,
         uint256 tokenId,
         string calldata memo
-    ) external virtual {
+    ) public virtual {
         address operator = msg.sender;
         if (
             _isRedeemed(operator, redemptionId, tokenId) == true ||
@@ -67,7 +67,7 @@ abstract contract ERC6672 is ERC721, ERC721Enumerable, IERC6672 {
         bytes32 redemptionId,
         uint256 tokenId,
         string calldata memo
-    ) external virtual {
+    ) public virtual {
         address operator = msg.sender;
         if (
             _isRedeemed(operator, redemptionId, tokenId) == false ||
